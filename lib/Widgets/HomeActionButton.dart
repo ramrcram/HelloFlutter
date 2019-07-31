@@ -17,22 +17,26 @@ class _HomeActionButtonState extends State<HomeActionButton> {
           splashColor: Colors.greenAccent,
           shape: new CircleBorder(),
           child: Padding(
-            padding: EdgeInsets.all(0.0),
+            padding: EdgeInsets.all(10.0),
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 SizedBox(
                   width: 100.0,
                   height: 100.0,
-                ),
-                Text(
-                  widget.buttonText,
-                  maxLines: 1,
-                style: TextStyle(color: Colors.white),
+                  child: Center(
+                    child: Text(
+                    widget.buttonText,
+                    maxLines: 1,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight:FontWeight.bold,
+                      fontSize: 20.0),
+                  ),
+                  )
+              )]
             ),
-          ],
         ),
-      ),
       onPressed: widget.onPressed
     );
   }
